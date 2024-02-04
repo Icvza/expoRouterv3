@@ -2,8 +2,11 @@ import { StyleSheet } from 'react-native';
 
 import EditScreenInfo from '@/components/EditScreenInfo';
 import { Text, View } from '@/components/Themed';
+import { useLocalSearchParams } from 'expo-router';
 
 export default function TabTwoScreen() {
+  const params = useLocalSearchParams()
+  console.log('params', params)
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Tab Two</Text>
